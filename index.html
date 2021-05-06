@@ -55,22 +55,27 @@
 
                     <div class="chat-left">She looks so happy! The time we discussed works. How long shall I take her out for?</div>
 
-                    <form class="flex flex-y">
+                    <form class="flex flex-y" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input type="bot-field"></label>
+                        </p>
                         <div class="half plan flex">
-                            <input type="radio" name="plan" id="half">
-                            <label for="half">30 minute walk</label>
-                            <span class="flex">$29</span>
+                            <span class="radio"></span>
+                            <input type="radio" name="plan" id="half" required>
+                            <label for="half" class="flex">30 minute walk<span>$29</span></label>
                         </div>
 
                         <div class="hour plan flex">
-                            <input type="radio" name="plan" id="hour">
-                            <label for="hour">1 hour walk</label>
-                            <span>$49</span>
+                            <span class="radio"></span>
+                            <input type="radio" name="plan" id="hour" required>
+                            <label for="hour" class="flex">1 hour walk <span class="hour-span">$49</span></label>
                         </div>
 
                         <div class="message flex">
-                            <input type="text" placeholder="Type a message…">
+                            <input type="text" name="message" value required placeholder="Type a message…">
                             <span class="icon-chevron-right"></span>
+                            <input type="submit" value="">
                         </div>
                     </form>
                 </div>
