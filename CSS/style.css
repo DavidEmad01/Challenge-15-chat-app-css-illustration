@@ -1,0 +1,353 @@
+/* Start Variables */
+:root {
+    --bg-color: hsl(270, 20%, 96%);
+    --dark-v: hsl(264, 100%, 61%);
+    --light-v: hsl(293, 100%, 63%);
+}
+
+
+/* End Variables */
+/* Start General Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* End General Rules */
+
+/* Start Components */
+.container {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Small Screen */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+/* Medium Screen */
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-y {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 100px;
+}
+
+.chat-left,
+.chat-right {
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    max-width: 250px;
+}
+
+.chat-left {
+    color: hsl(276, 55%, 52%);
+    background-color: rgb(242, 229, 243);
+}
+
+.chat-right {
+    color: hsl(271, 15%, 43%);
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plan {
+    background-image: linear-gradient(to right, var(--light-v), var(--dark-v));
+    border-radius: 15px 15px 15px 5px;
+    margin: 10px 0;
+    padding: 15px 10px;
+    width: 250px;
+}
+/* End Components */
+
+/* Start Main */
+.main {
+    margin-top: 150px;
+}
+/* Start App */
+.main .app {
+    width: 400px;
+    background-color: var(--bg-color);
+    border: 14px solid white;
+    border-radius: 30px;
+}
+
+.main .app header {
+    background-image: linear-gradient(to right, var(--dark-v), var(--light-v));
+    position: relative;
+    border-radius: 15px 15px 10px 10px;
+    color: white;
+    padding: 0 10px 10px 10px;
+}
+
+.main .app header .white-area {
+    position: relative;
+    top: -14px;
+    width: 50%;
+    background-color: white;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.main .app header .user {
+    justify-content: flex-start;
+}
+
+.main .app header .user .dots {
+    margin-left: 110px;
+}
+
+.main .app header .user-data {
+    margin-left: 10px;
+}
+
+.main .app header .user-data p {
+    font-size: 13px;
+    color: hsl(276, 100%, 81%);
+}
+
+.main .app header .user-data img{
+    border: 3px solid #fff;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* End App */
+
+/* Start Content */
+.app {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+}
+
+.app .content {
+    padding: 10px;
+}
+
+.app .content.flex .chat-left {
+    align-self: flex-start;
+}
+
+.app .content.flex .chat-right {
+    align-self: flex-end;
+}
+
+.app .content .images {
+    align-self: flex-end;
+    margin: 10px 0;
+}
+
+.app .content .images img {
+    width: 60px;
+    border-radius: 20px;
+    margin: 0 2.5px;
+}
+
+.app .content form {
+    align-self: flex-start;
+}
+
+.app .content .plan {
+    color: hsl(276, 100%, 81%);
+    justify-content: flex-start;
+}
+
+.app .content .plan input{
+    margin: 0 10px;
+}
+
+.app .content .plan span {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.app .content .plan label {
+    margin-right: 30px;
+}
+
+.app .content form #hour + label {
+    margin-right: 60px;
+}
+
+.app .content form .message {
+    position: relative;
+    align-self: flex-start;
+    width: 140%;
+}
+
+.app .content form .message span {
+    color: white;
+    position: absolute;
+    right: 10px;
+    background-color: black;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .content form .message input {
+    width: 100%;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+
+::placeholder {
+    color: hsl(270, 7%, 64%);
+}
+/* End Content */
+
+.main .booking {
+    max-width: 70%;
+}
+
+.main .booking h1 {
+    color: hsl(271, 36%, 24%);
+    margin: 20px auto;
+}
+
+.main .booking p {
+    color: hsl(270, 7%, 64%);
+    line-height: 1.5;
+}
+
+/* End Main */
+
+/* Start Background */
+.app {
+    position: relative;
+}
+
+.app::before {
+    content: "";
+    position: absolute;
+    top: -500px;
+    left: -800px;
+    width: 900px;
+    height: 1300px;
+    border-radius: 0 0 700px 700px;
+    background-color: black;
+    background-image: linear-gradient(to bottom, var(--light-v), var(--dark-v));
+    z-index: -1;
+}
+
+.booking {
+    margin-left: 100px;
+    position: relative;
+}
+
+.booking::after {
+    content: "";
+    position: absolute;
+    left: 350px;
+    top: -200px;
+    width: 900px;
+    height: 1300px;
+    border-radius: 500px 0 0 0;
+    background-color: rgb(247, 232, 244);
+    z-index: -1;
+    width: 100%;
+}
+/* end Background */
+
+/* Start Footer */
+footer {
+    margin-top: 100px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--dark-v);
+    font-weight: bold;
+}
+/* End Footer */
+
+/* Start Phone */
+@media (max-width: 767px) {
+    .main .container.grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main .app {
+        margin: auto;
+        width: 325px;
+    }
+
+    .main .app * {
+        /* max-width: 100%; */
+    }
+
+    .main .app header .user .dots {
+        margin-left: 40px;
+    }
+
+    .app .content form .message {
+        position: relative;
+        align-self: flex-start;
+        width: 110%;
+    }
+
+    .main .booking {
+        margin: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .booking::after {
+        content: "";
+        position: absolute;
+        left: 150px;
+        top: -200px;
+        width: 195px;
+        height: 600px;
+        border-radius: 200px 0 0 0;
+        background-color: rgb(247, 232, 244);
+        z-index: -1;
+    }
+}
