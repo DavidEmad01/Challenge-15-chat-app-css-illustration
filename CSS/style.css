@@ -231,12 +231,12 @@ p.hidden {
 
 .app .content .plan label span {
     position: relative;
-    left: 45px;
+    left: 35px;
 }
 
 .app .content .plan label .hour-span {
     position: relative;
-    left: 70px;
+    left: 65px;
 }
 
 .app .content form #hour + label {
